@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block body %}
+<a href="/firstapp/create/">Go To Create Page -></a>
+<h1>Todo List</h1>
+
+{% for i in todo %}
+
+<p>Title : {{ i.title }}</p>
+<p>Description: {{ i.description }}</p>
+<input type="checkbox" {% if i.completed %} checked {% endif %}>
+<p>{{ i.created_at }}</p>
+<p>{{ i.updated_at }}</p>
+<hr>
+{% endfor %}
+
+{% endblock %}

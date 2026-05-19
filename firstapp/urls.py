@@ -1,6 +1,7 @@
 from django.urls import path
-from .views import HomePage
+from .views import TodoList,TodoCreate
 
 urlpatterns = [
-  path('home/', HomePage)
+  path('list/', TodoList),
+  path('create/', TodoCreate),
 ]
